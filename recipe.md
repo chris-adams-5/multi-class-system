@@ -33,13 +33,13 @@ get_details() -> str
 Tyre
 - tread_depth = integer
 - pressure = integer
-- date_recorded = datetime.now()
+- date_recorded = date_recorded.now()
 
 - history = [
     {
         tread_depth: int
         pressure: int
-        date_recorded : datetime
+        date_recorded : date_recorded
     },
     {
         tread_depth: int,
