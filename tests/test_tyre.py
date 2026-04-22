@@ -8,11 +8,11 @@ Result = None
 
 def test_tyre_depth_pressure_initially_returns_none():
     tyre_1 = Tyre()
-    result1 = tyre_1.tread_depth
+    result1 = tyre_1.tyre_info['tread_depth']
     assert result1 == None
-    result2 = tyre_1.pressure
+    result2 = tyre_1.tyre_info['pressure']
     assert result2 == None
-    result3 = tyre_1.date_recorded
+    result3 = tyre_1.tyre_info['date_recorded']
     assert result3 == None
 
 
@@ -24,11 +24,11 @@ Result = Add tread depth and pressure to Tyre instance
 def test_add_tread_depth_and_pressure():
     tyre_1 = Tyre()
     tyre_1.record_tyre_data(12, 40, datetime(2026,3,27))
-    result1 = tyre_1.tread_depth
+    result1 = tyre_1.tyre_info['tread_depth']
     assert result1 == 12
-    result2 = tyre_1.pressure
+    result2 = tyre_1.tyre_info['pressure']
     assert result2 == 40
-    result3 = tyre_1.date_recorded
+    result3 = tyre_1.tyre_info['date_recorded']
     assert result3 == datetime(2026,3,27)
 
 
@@ -40,11 +40,11 @@ def test_add_mulitple():
     tyre_1 = Tyre()
     tyre_1.record_tyre_data(12, 40, datetime(2026,3,27))
     tyre_1.record_tyre_data(18, 35, datetime(2026,4,18))
-    result1 = tyre_1.tread_depth
+    result1 = tyre_1.tyre_info['tread_depth']
     assert result1 == 18
-    result2 = tyre_1.pressure
+    result2 = tyre_1.tyre_info['pressure']
     assert result2 == 35
-    result3 = tyre_1.date_recorded
+    result3 = tyre_1.tyre_info['date_recorded']
     assert result3 == datetime(2026,4,18)
     
 
